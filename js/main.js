@@ -61,7 +61,7 @@ const NAME = [
   'Мама бы так не сделала',
   'Серый волк',
   'Эйлин Уорнос',
-]
+];
 
 const getRandomInteger = (a, b) => {
   const lower = Math.ceil(Math.min(a, b));
@@ -85,9 +85,9 @@ const getUniqueRandomInteger = (a, b) => {
     }
   };
 };
-const getCommentId = getUniqueRandomInteger(0, 999);
+const getCommentId = getUniqueRandomInteger(0, 30);
 const getAvatarId = getUniqueRandomInteger(1, AVATAR_COUNT);
-const getComment=()=>({
+const getComment = ()=>({
   id: getCommentId(),
   avatar: `img/avatar-${getAvatarId()}.svg`,
   message: MESSAGES[getRandomInteger(0, MESSAGES.length)],
